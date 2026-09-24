@@ -48,9 +48,9 @@ const Home = () => {
           api.get('/books?newArrival=true&limit=4'),
           api.get('/books?sort=rating&limit=8')
         ]);
-        setBestSellers(bs.data.books);
-        setNewArrivals(na.data.books);
-        setFeatured(feat.data.books);
+        setBestSellers(bs.data.books || []);
+        setNewArrivals(na.data.books || []);
+        setFeatured(feat.data.books || []);
         setTotalBooks(feat.data.total ?? null);
       } catch (err) {
         console.error(err);
