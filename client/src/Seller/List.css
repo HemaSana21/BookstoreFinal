@@ -1,0 +1,59 @@
+/* Stylesheet for seller book-listing layouts (My Products page) */
+.seller-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.seller-product-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.seller-product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.seller-product-card h4 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.seller-product-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #666;
+}
+
+.seller-product-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.seller-product-actions button {
+  flex: 1;
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
+.stock-pill {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.stock-pill.in-stock { background: #e6f7ec; color: #1e7e34; }
+.stock-pill.low-stock { background: #fff3cd; color: #856404; }
+.stock-pill.out-of-stock { background: #fdecea; color: #c0392b; }
